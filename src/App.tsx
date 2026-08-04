@@ -5,6 +5,8 @@ import HeroSection from './components/HeroSection';
 import GallerySection from './components/GallerySection';
 import AboutSection from './components/AboutSection';
 import Lightbox from './components/Lightbox';
+import { PaletteProvider } from './context/PaletteContext';
+import PaletteSwitcher from './components/PaletteSwitcher';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +28,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <PaletteProvider>
       <Navbar />
       <HeroSection />
       <GallerySection onPhotoClick={handlePhotoClick} />
@@ -38,6 +40,7 @@ export default function App() {
         onClose={handleLightboxClose}
         onNavigate={handleLightboxNavigate}
       />
-    </>
+      <PaletteSwitcher />
+    </PaletteProvider>
   );
 }
