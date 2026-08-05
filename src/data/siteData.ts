@@ -104,7 +104,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-nike',
       name: 'Nike',
-      logoUrl: 'https://logo.clearbit.com/nike.com',
+      logoUrl: '/images/brands/nike.svg',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800',
       photos: [
@@ -116,7 +116,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-adidas',
       name: 'Adidas',
-      logoUrl: 'https://logo.clearbit.com/adidas.com',
+      logoUrl: '/images/brands/adidas.svg',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=800',
       photos: [
@@ -128,7 +128,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-coca-cola',
       name: 'Coca-Cola',
-      logoUrl: 'https://logo.clearbit.com/coca-cola.com',
+      logoUrl: '/images/brands/coca-cola.svg',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=800',
       photos: [
@@ -140,7 +140,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-apple',
       name: 'Apple',
-      logoUrl: 'https://logo.clearbit.com/apple.com',
+      logoUrl: '/images/brands/apple.svg',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=800',
       photos: [
