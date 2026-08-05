@@ -104,8 +104,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-nike',
       name: 'Nike',
-      logoUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/200px-Logo_NIKE.svg.png',
+      logoUrl: 'https://logo.clearbit.com/nike.com',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800',
       photos: [
@@ -117,8 +116,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-adidas',
       name: 'Adidas',
-      logoUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/200px-Adidas_Logo.svg.png',
+      logoUrl: 'https://logo.clearbit.com/adidas.com',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=800',
       photos: [
@@ -130,8 +128,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-coca-cola',
       name: 'Coca-Cola',
-      logoUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/200px-Coca-Cola_logo.svg.png',
+      logoUrl: 'https://logo.clearbit.com/coca-cola.com',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=800',
       photos: [
@@ -143,8 +140,7 @@ export const siteData: SiteData = {
     {
       id: 'brand-apple',
       name: 'Apple',
-      logoUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png',
+      logoUrl: 'https://logo.clearbit.com/apple.com',
       coverPhotoUrl:
         'https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=800',
       photos: [
