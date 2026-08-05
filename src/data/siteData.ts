@@ -93,9 +93,69 @@ export const siteData: SiteData = {
   ],
   about: {
     bio: 'Fotógrafo colombiano apasionado por capturar la esencia de los lugares y las personas que los habitan. Viajo con mi cámara buscando historias visuales que conecten culturas y despierten curiosidad.',
+    photographerPhotoUrl:
+      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600',
     socialLinks: [
       { platform: 'Instagram', url: 'https://instagram.com/nicorestrepo' },
       { platform: 'Behance', url: 'https://behance.net/nicorestrepo' },
     ],
+  },
+  brands: [
+    {
+      id: 'brand-nike',
+      name: 'Nike',
+      logoUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/200px-Logo_NIKE.svg.png',
+      coverPhotoUrl:
+        'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800',
+      photos: [
+        'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200',
+        'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1200',
+        'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=1200',
+      ],
+    },
+    {
+      id: 'brand-adidas',
+      name: 'Adidas',
+      logoUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/200px-Adidas_Logo.svg.png',
+      coverPhotoUrl:
+        'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=800',
+      photos: [
+        'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=1200',
+        'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=1200',
+        'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=1200',
+      ],
+    },
+    {
+      id: 'brand-coca-cola',
+      name: 'Coca-Cola',
+      logoUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/200px-Coca-Cola_logo.svg.png',
+      coverPhotoUrl:
+        'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=800',
+      photos: [
+        'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=1200',
+        'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=1200',
+        'https://images.unsplash.com/photo-1581098365948-6a5a912b7a49?w=1200',
+      ],
+    },
+    {
+      id: 'brand-apple',
+      name: 'Apple',
+      logoUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png',
+      coverPhotoUrl:
+        'https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=800',
+      photos: [
+        'https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=1200',
+        'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200',
+        'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=1200',
+      ],
+    },
+  ],
+  contact: {
+    title: 'Contacto',
+    subtitle: '¿Tienes un proyecto en mente? Hablemos.',
   },
 };

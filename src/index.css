@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./styles/palettes.css";
+@import "./styles/marquee.css";
 
 @theme {
   --color-bg-primary: var(--color-bg-primary);
@@ -30,7 +31,8 @@
   /* Compensar la navbar sticky (h-14 = 3.5rem) al hacer scroll a secciones */
   #hero,
   #gallery,
-  #about {
+  #about,
+  #contact {
     scroll-margin-top: 3.5rem;
   }
 }

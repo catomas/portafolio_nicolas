@@ -1,12 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { siteData } from '../data/siteData';
 
-const navLinks = [
-  { label: 'Inicio', targetId: 'hero' },
-  { label: 'Galería', targetId: 'gallery' },
-  { label: 'Sobre Mí', targetId: 'about' },
-] as const;
-
-const sectionIds = navLinks.map((link) => link.targetId);
+interface NavLink {
+  label: string;
+  targetId: string;
+}
 
 function scrollToSection(id: string) {
   const element = document.getElementById(id);
@@ -18,6 +16,25 @@ function scrollToSection(id: string) {
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const navLinks: NavLink[] = useMemo(() => {
+    const links: NavLink[] = [
+      { label: 'Inicio', targetId: 'hero' },
+      { label: 'Galería', targetId: 'gallery' },
+      ...(siteData.brands && siteData.brands.length > 0
+        ? [{ label: 'Marcas', targetId: 'brands' }]
+        : []),
+      { label: 'Sobre Mí', targetId: 'about' },
+      { label: 'Contacto', targetId: 'contact' },
+    ];
+
+    return links;
+  }, []);
+
+  const sectionIds = useMemo(
+    () => navLinks.map((link) => link.targetId),
+    [navLinks]
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,7 +57,7 @@ export default function Navbar() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [sectionIds]);
 
   function handleMobileNavClick(targetId: string) {
     scrollToSection(targetId);
