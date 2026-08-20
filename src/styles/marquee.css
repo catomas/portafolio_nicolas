@@ -3,14 +3,14 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / var(--marquee-copies)));
   }
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 30s linear infinite;
+  animation: marquee-scroll var(--marquee-duration, 30s) linear infinite;
 }
 
 .marquee-track:hover {
