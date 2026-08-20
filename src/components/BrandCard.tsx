@@ -25,7 +25,7 @@ export default function BrandCard({ brand, onClick }: BrandCardProps) {
         <img
           src={brand.logoUrl}
           alt={`Logo de ${brand.name}`}
-          className="h-8 object-contain"
+          className="h-8 object-contain brand-logo"
           loading="lazy"
         />
       </div>

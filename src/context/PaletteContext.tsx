@@ -40,6 +40,7 @@ export function usePaletteContext(): PaletteContextValue {
 
 /**
  * Aplica los colores de una paleta como CSS custom properties en :root.
+ * También establece un data attribute para adaptar elementos como logos de marcas.
  */
 export function applyPalette(palette: Palette): void {
   const root = document.documentElement;
@@ -48,6 +49,23 @@ export function applyPalette(palette: Palette): void {
   root.style.setProperty('--color-bg-secondary', colors.bgSecondary);
   root.style.setProperty('--color-text-primary', colors.textPrimary);
   root.style.setProperty('--color-accent', colors.accent);
+
+  // Determinar si el fondo es oscuro para adaptar logos de marcas
+  const isDark = isColorDark(colors.bgPrimary);
+  root.setAttribute('data-theme-mode', isDark ? 'dark' : 'light');
+}
+
+/**
+ * Determina si un color hex es oscuro basándose en luminancia relativa.
+ */
+function isColorDark(hex: string): boolean {
+  const cleanHex = hex.replace('#', '');
+  const r = parseInt(cleanHex.substring(0, 2), 16);
+  const g = parseInt(cleanHex.substring(2, 4), 16);
+  const b = parseInt(cleanHex.substring(4, 6), 16);
+  // Fórmula de luminancia percibida
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return luminance < 0.5;
 }
 
 /**

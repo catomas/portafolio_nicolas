@@ -18,7 +18,7 @@ export default function BrandMarquee({ brands }: BrandMarqueeProps) {
             key={`${brand.id}-${index}`}
             src={brand.logoUrl}
             alt={brand.name}
-            className="h-12 max-h-12 object-contain mx-8"
+            className="h-12 max-h-12 object-contain mx-8 brand-logo"
           />
         ))}
       </div>
