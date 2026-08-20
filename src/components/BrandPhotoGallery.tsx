@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import type { Brand } from '../data/types';
 import Lightbox from './Lightbox';
 
@@ -11,7 +12,7 @@ export default function BrandPhotoGallery({ brand, onBack }: BrandPhotoGalleryPr
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
-    <div className="animate-fade-in-up">
+    <div>
       {/* Header con botón de volver y nombre de la marca */}
       <div className="flex items-center gap-4 mb-8">
         <button
@@ -47,15 +48,18 @@ export default function BrandPhotoGallery({ brand, onBack }: BrandPhotoGalleryPr
         </div>
       </div>
 
-      {/* Grid de fotos */}
+      {/* Grid de fotos con animación escalonada */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {brand.photos.map((photoUrl, index) => (
-          <button
+          <motion.button
             key={photoUrl}
             type="button"
             onClick={() => setLightboxIndex(index)}
             className="group overflow-hidden rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent"
             aria-label={`Ver foto ${index + 1} de ${brand.name}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.08 }}
           >
             <img
               src={photoUrl}
@@ -63,7 +67,7 @@ export default function BrandPhotoGallery({ brand, onBack }: BrandPhotoGalleryPr
               className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
               loading="lazy"
             />
-          </button>
+          </motion.button>
         ))}
       </div>
 
