@@ -12,6 +12,7 @@ export const siteData: SiteData = {
     { id: 'portraits', name: 'Retratos' },
     { id: 'urban', name: 'Urbano' },
     { id: 'travel', name: 'Viajes' },
+    { id: 'brands', name: 'Marcas' },
   ],
   photos: [
     // Paisajes
@@ -89,6 +90,79 @@ export const siteData: SiteData = {
       url: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800',
       title: 'Carretera infinita',
       categoryId: 'travel',
+    },
+    // Marcas
+    {
+      id: '13',
+      url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800',
+      title: 'Nike',
+      categoryId: 'brands',
+    },
+    {
+      id: '14',
+      url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800',
+      title: 'Nike',
+      categoryId: 'brands',
+    },
+    {
+      id: '15',
+      url: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800',
+      title: 'Nike',
+      categoryId: 'brands',
+    },
+    {
+      id: '16',
+      url: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=800',
+      title: 'Adidas',
+      categoryId: 'brands',
+    },
+    {
+      id: '17',
+      url: 'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=800',
+      title: 'Adidas',
+      categoryId: 'brands',
+    },
+    {
+      id: '18',
+      url: 'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800',
+      title: 'Adidas',
+      categoryId: 'brands',
+    },
+    {
+      id: '19',
+      url: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=800',
+      title: 'Coca-Cola',
+      categoryId: 'brands',
+    },
+    {
+      id: '20',
+      url: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=800',
+      title: 'Coca-Cola',
+      categoryId: 'brands',
+    },
+    {
+      id: '21',
+      url: 'https://images.unsplash.com/photo-1581098365948-6a5a912b7a49?w=800',
+      title: 'Coca-Cola',
+      categoryId: 'brands',
+    },
+    {
+      id: '22',
+      url: 'https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=800',
+      title: 'Apple',
+      categoryId: 'brands',
+    },
+    {
+      id: '23',
+      url: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800',
+      title: 'Apple',
+      categoryId: 'brands',
+    },
+    {
+      id: '24',
+      url: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800',
+      title: 'Apple',
+      categoryId: 'brands',
     },
   ],
   about: {
