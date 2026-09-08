@@ -1,0 +1,657 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Preparar dependencias, variables de entorno y script de seed": [
+      {
+        "executionId": "4551d5b9-9c9a-4313-92aa-3836ee5c42f5",
+        "chatSessionId": "sess_099c01e5-76d3-40f9-acc5-46c68a759609",
+        "timestamp": 1788293470424
+      },
+      {
+        "executionId": "4551d5b9-9c9a-4313-92aa-3836ee5c42f5",
+        "chatSessionId": "sess_099c01e5-76d3-40f9-acc5-46c68a759609",
+        "timestamp": 1788293587819
+      }
+    ],
+    "2.1 Agregar tipos de estilo de galería y extensión aditiva de `SiteData`": [
+      {
+        "executionId": "38a3ea66-9880-4667-a256-e1fb7ce32a6b",
+        "chatSessionId": "sess_c8de734e-150d-456c-853f-a458a4c47612",
+        "timestamp": 1788293623328
+      },
+      {
+        "executionId": "38a3ea66-9880-4667-a256-e1fb7ce32a6b",
+        "chatSessionId": "sess_c8de734e-150d-456c-853f-a458a4c47612",
+        "timestamp": 1788293706151
+      }
+    ],
+    "2.2 Añadir el valor por defecto de `galleryStyle` en el Fallback_Estatico": [
+      {
+        "executionId": "38a3ea66-9880-4667-a256-e1fb7ce32a6b",
+        "chatSessionId": "sess_c8de734e-150d-456c-853f-a458a4c47612",
+        "timestamp": 1788293710265
+      },
+      {
+        "executionId": "38a3ea66-9880-4667-a256-e1fb7ce32a6b",
+        "chatSessionId": "sess_c8de734e-150d-456c-853f-a458a4c47612",
+        "timestamp": 1788293779918
+      }
+    ],
+    "2. Extender el modelo de tipos y el Fallback_Estatico": [
+      {
+        "executionId": "38a3ea66-9880-4667-a256-e1fb7ce32a6b",
+        "chatSessionId": "sess_c8de734e-150d-456c-853f-a458a4c47612",
+        "timestamp": 1788293779949
+      }
+    ],
+    "3.1 Implementar `src/lib/firebase.ts` (Firebase_Init)": [
+      {
+        "executionId": "e71fd0df-09f9-47ab-8dcd-02c0ba6aafed",
+        "chatSessionId": "sess_0bd35e32-f67d-4a07-9b08-15a908e3b316",
+        "timestamp": 1788293808786
+      },
+      {
+        "executionId": "e71fd0df-09f9-47ab-8dcd-02c0ba6aafed",
+        "chatSessionId": "sess_0bd35e32-f67d-4a07-9b08-15a908e3b316",
+        "timestamp": 1788294056131
+      }
+    ],
+    "3. Inicialización de Firebase con validación pura": [
+      {
+        "executionId": "e71fd0df-09f9-47ab-8dcd-02c0ba6aafed",
+        "chatSessionId": "sess_0bd35e32-f67d-4a07-9b08-15a908e3b316",
+        "timestamp": 1788294056168
+      }
+    ],
+    "4.1 Implementar `src/lib/validation.ts`": [
+      {
+        "executionId": "b6cffc56-9c57-4f30-8c37-8bd2798b8037",
+        "chatSessionId": "sess_046e6663-afda-4f62-a93c-e646caa35c36",
+        "timestamp": 1788294131086
+      },
+      {
+        "executionId": "b6cffc56-9c57-4f30-8c37-8bd2798b8037",
+        "chatSessionId": "sess_046e6663-afda-4f62-a93c-e646caa35c36",
+        "timestamp": 1788294244989
+      }
+    ],
+    "4. Validadores puros y sus pruebas de propiedad": [
+      {
+        "executionId": "b6cffc56-9c57-4f30-8c37-8bd2798b8037",
+        "chatSessionId": "sess_046e6663-afda-4f62-a93c-e646caa35c36",
+        "timestamp": 1788294245039
+      }
+    ],
+    "5.1 Implementar `src/lib/loginThrottle.ts`": [
+      {
+        "executionId": "7ebf0c4b-acc3-46db-a814-00a40d04a9e6",
+        "chatSessionId": "sess_8b8e0be1-b644-42db-8c8e-c3a335b60e9d",
+        "timestamp": 1788294277754
+      },
+      {
+        "executionId": "7ebf0c4b-acc3-46db-a814-00a40d04a9e6",
+        "chatSessionId": "sess_8b8e0be1-b644-42db-8c8e-c3a335b60e9d",
+        "timestamp": 1788294418841
+      }
+    ],
+    "5. Limitador de intentos de login (lógica pura)": [
+      {
+        "executionId": "7ebf0c4b-acc3-46db-a814-00a40d04a9e6",
+        "chatSessionId": "sess_8b8e0be1-b644-42db-8c8e-c3a335b60e9d",
+        "timestamp": 1788294418888
+      }
+    ],
+    "6.1 Implementar `resolveDoc` y `src/hooks/useFirestoreDoc.ts`": [
+      {
+        "executionId": "0e96b101-4381-4567-a06a-235418e35293",
+        "chatSessionId": "sess_e0df8ad4-b1dd-45fd-9bb9-563c6c9e88aa",
+        "timestamp": 1788294492504
+      },
+      {
+        "executionId": "0e96b101-4381-4567-a06a-235418e35293",
+        "chatSessionId": "sess_e0df8ad4-b1dd-45fd-9bb9-563c6c9e88aa",
+        "timestamp": 1788294650441
+      }
+    ],
+    "6.4 Implementar `src/hooks/usePhotos.ts` y `src/hooks/useBrands.ts`": [
+      {
+        "executionId": "0e96b101-4381-4567-a06a-235418e35293",
+        "chatSessionId": "sess_e0df8ad4-b1dd-45fd-9bb9-563c6c9e88aa",
+        "timestamp": 1788294719925
+      },
+      {
+        "executionId": "0e96b101-4381-4567-a06a-235418e35293",
+        "chatSessionId": "sess_e0df8ad4-b1dd-45fd-9bb9-563c6c9e88aa",
+        "timestamp": 1788294806608
+      }
+    ],
+    "6. Hooks de lectura reactiva con fallback": [
+      {
+        "executionId": "0e96b101-4381-4567-a06a-235418e35293",
+        "chatSessionId": "sess_e0df8ad4-b1dd-45fd-9bb9-563c6c9e88aa",
+        "timestamp": 1788294806639
+      }
+    ],
+    "7.1 Implementar `src/contexts/AuthContext.tsx`": [
+      {
+        "executionId": "79f4b6d0-b6d5-4599-9822-ec72225b72a2",
+        "chatSessionId": "sess_c3fad7b2-a252-4bba-94d5-25dc2c43d62f",
+        "timestamp": 1788294830575
+      },
+      {
+        "executionId": "79f4b6d0-b6d5-4599-9822-ec72225b72a2",
+        "chatSessionId": "sess_c3fad7b2-a252-4bba-94d5-25dc2c43d62f",
+        "timestamp": 1788295005196
+      }
+    ],
+    "7. Contexto de autenticación": [
+      {
+        "executionId": "79f4b6d0-b6d5-4599-9822-ec72225b72a2",
+        "chatSessionId": "sess_c3fad7b2-a252-4bba-94d5-25dc2c43d62f",
+        "timestamp": 1788295005265
+      }
+    ],
+    "8.1 Implementar `src/components/ProtectedRoute.tsx`": [
+      {
+        "executionId": "fa6ebc7c-64fc-4eb9-906d-3afb5c628dc9",
+        "chatSessionId": "sess_87bdb8b1-50e9-4e18-88a3-382b2f1411d9",
+        "timestamp": 1788295025455
+      },
+      {
+        "executionId": "fa6ebc7c-64fc-4eb9-906d-3afb5c628dc9",
+        "chatSessionId": "sess_87bdb8b1-50e9-4e18-88a3-382b2f1411d9",
+        "timestamp": 1788295119724
+      }
+    ],
+    "8. Guard de rutas protegidas": [
+      {
+        "executionId": "fa6ebc7c-64fc-4eb9-906d-3afb5c628dc9",
+        "chatSessionId": "sess_87bdb8b1-50e9-4e18-88a3-382b2f1411d9",
+        "timestamp": 1788295119760
+      }
+    ],
+    "9. Página de login": [
+      {
+        "executionId": "6c99fc83-e031-47a1-b20d-31ce0e8db9fa",
+        "chatSessionId": "sess_717d8211-9a73-47b7-96a1-1def6857da63",
+        "timestamp": 1788295140209
+      },
+      {
+        "executionId": "6c99fc83-e031-47a1-b20d-31ce0e8db9fa",
+        "chatSessionId": "sess_717d8211-9a73-47b7-96a1-1def6857da63",
+        "timestamp": 1788295416994
+      }
+    ],
+    "10. Contexto de datos del sitio público": [
+      {
+        "executionId": "ded3df68-7e85-42a8-9fab-b92fb6c049f6",
+        "chatSessionId": "sess_48a8775f-73e8-4552-8270-0981518c8a0d",
+        "timestamp": 1788295444446
+      },
+      {
+        "executionId": "ded3df68-7e85-42a8-9fab-b92fb6c049f6",
+        "chatSessionId": "sess_48a8775f-73e8-4552-8270-0981518c8a0d",
+        "timestamp": 1788295598507
+      }
+    ],
+    "11.1 Implementar utilidades y subida en `src/lib/admin.ts`": [
+      {
+        "executionId": "37e776b8-7513-4ca7-97a7-5235b1c74416",
+        "chatSessionId": "sess_6fc53683-5a54-4e13-8fc6-ea19b7c58045",
+        "timestamp": 1788295627609
+      },
+      {
+        "executionId": "37e776b8-7513-4ca7-97a7-5235b1c74416",
+        "chatSessionId": "sess_6fc53683-5a54-4e13-8fc6-ea19b7c58045",
+        "timestamp": 1788295702038
+      }
+    ],
+    "11.3 Implementar CRUD de fotos y marcas en `src/lib/admin.ts`": [
+      {
+        "executionId": "37e776b8-7513-4ca7-97a7-5235b1c74416",
+        "chatSessionId": "sess_6fc53683-5a54-4e13-8fc6-ea19b7c58045",
+        "timestamp": 1788295710475
+      },
+      {
+        "executionId": "37e776b8-7513-4ca7-97a7-5235b1c74416",
+        "chatSessionId": "sess_6fc53683-5a54-4e13-8fc6-ea19b7c58045",
+        "timestamp": 1788295821348
+      }
+    ],
+    "11.4 Implementar escritura de singletons en `src/lib/admin.ts`": [
+      {
+        "executionId": "37e776b8-7513-4ca7-97a7-5235b1c74416",
+        "chatSessionId": "sess_6fc53683-5a54-4e13-8fc6-ea19b7c58045",
+        "timestamp": 1788295824857
+      },
+      {
+        "executionId": "37e776b8-7513-4ca7-97a7-5235b1c74416",
+        "chatSessionId": "sess_6fc53683-5a54-4e13-8fc6-ea19b7c58045",
+        "timestamp": 1788295981932
+      }
+    ],
+    "11. Capa de servicio de escritura (Admin_Service)": [
+      {
+        "executionId": "37e776b8-7513-4ca7-97a7-5235b1c74416",
+        "chatSessionId": "sess_6fc53683-5a54-4e13-8fc6-ea19b7c58045",
+        "timestamp": 1788295981969
+      }
+    ],
+    "12. Checkpoint - Verificar núcleo de lógica y datos": [
+      {
+        "executionId": "6b4bfcda-3d6a-4ad6-bd68-cc841c9cfce7",
+        "chatSessionId": "sess_f6e06745-5a9f-4218-80e3-6215fb8536d8",
+        "timestamp": 1788295996100
+      },
+      {
+        "executionId": "6b4bfcda-3d6a-4ad6-bd68-cc841c9cfce7",
+        "chatSessionId": "sess_f6e06745-5a9f-4218-80e3-6215fb8536d8",
+        "timestamp": 1788296063941
+      }
+    ],
+    "13.1 Configurar el enrutamiento en `src/main.tsx` y `src/App.tsx`": [
+      {
+        "executionId": "3fed77f6-495b-44c5-9706-d9cecf6c8813",
+        "chatSessionId": "sess_c1eef173-c5f6-4057-9ee2-274b59068a08",
+        "timestamp": 1788296122246
+      },
+      {
+        "executionId": "3fed77f6-495b-44c5-9706-d9cecf6c8813",
+        "chatSessionId": "sess_c1eef173-c5f6-4057-9ee2-274b59068a08",
+        "timestamp": 1788296357230
+      }
+    ],
+    "13. Enrutamiento y cableado de la aplicación": [
+      {
+        "executionId": "3fed77f6-495b-44c5-9706-d9cecf6c8813",
+        "chatSessionId": "sess_c1eef173-c5f6-4057-9ee2-274b59068a08",
+        "timestamp": 1788296357299
+      }
+    ],
+    "14.1 Refactorizar secciones públicas a `useSiteData()`": [
+      {
+        "executionId": "b46d9ea5-5a86-4b8d-ac48-d848a8b2d60c",
+        "chatSessionId": "sess_69473d3f-a5de-49d2-bf4f-4e7717af9243",
+        "timestamp": 1788296400762
+      },
+      {
+        "executionId": "b46d9ea5-5a86-4b8d-ac48-d848a8b2d60c",
+        "chatSessionId": "sess_69473d3f-a5de-49d2-bf4f-4e7717af9243",
+        "timestamp": 1788296608769
+      }
+    ],
+    "14.2 Aplicar estilos configurables de galería en `PhotoGrid` y `PhotoCard`": [
+      {
+        "executionId": "b46d9ea5-5a86-4b8d-ac48-d848a8b2d60c",
+        "chatSessionId": "sess_69473d3f-a5de-49d2-bf4f-4e7717af9243",
+        "timestamp": 1788296612698
+      },
+      {
+        "executionId": "b46d9ea5-5a86-4b8d-ac48-d848a8b2d60c",
+        "chatSessionId": "sess_69473d3f-a5de-49d2-bf4f-4e7717af9243",
+        "timestamp": 1788296705387
+      }
+    ],
+    "14. Refactor de componentes públicos para consumir `useSiteData()`": [
+      {
+        "executionId": "b46d9ea5-5a86-4b8d-ac48-d848a8b2d60c",
+        "chatSessionId": "sess_69473d3f-a5de-49d2-bf4f-4e7717af9243",
+        "timestamp": 1788296705435
+      }
+    ],
+    "15.1 Refactorizar `src/components/ContactForm.tsx` (público)": [
+      {
+        "executionId": "9430e840-669f-4b7c-97f6-7705c3dd12f3",
+        "chatSessionId": "sess_bdc7f8f2-37dd-4c66-8a37-b56f4ea2ac0b",
+        "timestamp": 1788296754347
+      },
+      {
+        "executionId": "9430e840-669f-4b7c-97f6-7705c3dd12f3",
+        "chatSessionId": "sess_bdc7f8f2-37dd-4c66-8a37-b56f4ea2ac0b",
+        "timestamp": 1788296920225
+      }
+    ],
+    "15. Formulario de contacto público con EmailJS": [
+      {
+        "executionId": "9430e840-669f-4b7c-97f6-7705c3dd12f3",
+        "chatSessionId": "sess_bdc7f8f2-37dd-4c66-8a37-b56f4ea2ac0b",
+        "timestamp": 1788296920289
+      }
+    ],
+    "16.1 Implementar `src/pages/AdminPage.tsx` (tabs)": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297509242
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297708512
+      }
+    ],
+    "16.2 Implementar `admin/PhotoForm` y `admin/PhotoList`": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297714219
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297876100
+      }
+    ],
+    "16.3 Implementar `admin/CategoriesEditor`": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297717582
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297879530
+      }
+    ],
+    "16.4 Implementar `admin/HeroForm`": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297720860
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297883131
+      }
+    ],
+    "16.5 Implementar `admin/AboutForm`": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297887762
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788298471097
+      }
+    ],
+    "16.6 Implementar `admin/BrandForm` y `admin/BrandList`": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297891447
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788298474834
+      }
+    ],
+    "16.7 Implementar `admin/ContactForm` (admin)": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297895062
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788298478089
+      }
+    ],
+    "16.8 Implementar `admin/GalleryStyleForm`": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788297899946
+      },
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788298481581
+      }
+    ],
+    "16. Panel de administración y formularios": [
+      {
+        "executionId": "a7c05ab8-a88a-4d7e-bffb-d116960152be",
+        "chatSessionId": "sess_47df83ea-3966-40f2-b444-b4845c134f1f",
+        "timestamp": 1788298481613
+      }
+    ],
+    "9.1 Implementar `src/pages/LoginPage.tsx`": [
+      {
+        "executionId": "34d9240e-6088-4252-85b7-c289f9b0fdf4",
+        "chatSessionId": "sess_3a98b23f-8ee9-42f0-b635-975c8465ad39",
+        "timestamp": 1788301214859
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302973786
+      }
+    ],
+    "10.1 Implementar `src/contexts/SiteDataContext.tsx`": [
+      {
+        "executionId": "34d9240e-6088-4252-85b7-c289f9b0fdf4",
+        "chatSessionId": "sess_3a98b23f-8ee9-42f0-b635-975c8465ad39",
+        "timestamp": 1788301214928
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302977147
+      }
+    ],
+    "17.1 Implementar `scripts/seed.ts`": [
+      {
+        "executionId": "34d9240e-6088-4252-85b7-c289f9b0fdf4",
+        "chatSessionId": "sess_3a98b23f-8ee9-42f0-b635-975c8465ad39",
+        "timestamp": 1788301214966
+      },
+      {
+        "executionId": "34d9240e-6088-4252-85b7-c289f9b0fdf4",
+        "chatSessionId": "sess_3a98b23f-8ee9-42f0-b635-975c8465ad39",
+        "timestamp": 1788301218872
+      },
+      {
+        "executionId": "34d9240e-6088-4252-85b7-c289f9b0fdf4",
+        "chatSessionId": "sess_3a98b23f-8ee9-42f0-b635-975c8465ad39",
+        "timestamp": 1788301433628
+      }
+    ],
+    "18. Checkpoint final - Verificación completa": [
+      {
+        "executionId": "34d9240e-6088-4252-85b7-c289f9b0fdf4",
+        "chatSessionId": "sess_3a98b23f-8ee9-42f0-b635-975c8465ad39",
+        "timestamp": 1788301214998
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302985814
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303038423
+      }
+    ],
+    "17. Script de seed idempotente": [
+      {
+        "executionId": "34d9240e-6088-4252-85b7-c289f9b0fdf4",
+        "chatSessionId": "sess_3a98b23f-8ee9-42f0-b635-975c8465ad39",
+        "timestamp": 1788301433668
+      }
+    ],
+    "19.1 Instalar dependencias de drag & drop": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933250
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303055506
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303237501
+      }
+    ],
+    "19.2 Extender el tipo `Photo` con campos de orden y sembrar el orden en el Fallback_Estatico": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933300
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303060300
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303240965
+      }
+    ],
+    "19.3 Implementar el ordenamiento puro de Fotos `src/lib/photoOrder.ts`": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933347
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303245538
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303369760
+      }
+    ],
+    "19.5 Extender `src/lib/admin.ts` con reordenamiento y orden al crear/editar Fotos": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933395
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303381585
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303557185
+      }
+    ],
+    "19.7 Definir `PHOTO_SIZE_META` y usarlo en el selector de tamaño": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933433
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303249938
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303373130
+      }
+    ],
+    "19.8 Implementar `src/components/admin/GalleryEditor.tsx` (vista unificada)": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933466
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303564908
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303763583
+      }
+    ],
+    "19.10 Integrar `GalleryEditor` en `AdminPage`": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933502
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303767996
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788304136527
+      }
+    ],
+    "19.11 Refactorizar el sitio público para respetar el orden": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933571
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303384936
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303560597
+      }
+    ],
+    "19.13 Ajustar `scripts/seed.ts` para sembrar el orden de las Fotos": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933619
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303253816
+      },
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788303376861
+      }
+    ],
+    "20. Checkpoint final - Verificación del Editor de Galería": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788302933702
+      }
+    ],
+    "19. Editor Visual de Galería con reordenamiento y vista previa": [
+      {
+        "executionId": "95b4468f-06a7-4c5a-b7c5-08058acd8b44",
+        "chatSessionId": "sess_38d64ec4-d818-49c3-a7e7-4c307cb86f6c",
+        "timestamp": 1788304136661
+      }
+    ]
+  }
+}

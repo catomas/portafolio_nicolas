@@ -1,50 +1,39 @@
-import { useState, useCallback } from 'react';
-import type { Photo } from './data/types';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import GallerySection from './components/GallerySection';
-import BrandsSection from './components/BrandsSection';
-import AboutSection from './components/AboutSection';
-import ContactSection from './components/ContactSection';
-import Lightbox from './components/Lightbox';
-import { PaletteProvider } from './context/PaletteContext';
-import PaletteSwitcher from './components/PaletteSwitcher';
+import { Routes, Route } from 'react-router-dom';
+import PublicSite from './pages/PublicSite';
+import LoginPage from './pages/LoginPage';
+import AdminPage from './pages/AdminPage';
+import ProtectedRoute from './components/ProtectedRoute';
+import { SiteDataProvider } from './contexts/SiteDataContext';
 
+/**
+ * Enrutamiento del Sitio (Req 3).
+ *
+ * Se asume que `App` está envuelto por `BrowserRouter` + `AuthProvider`
+ * (ver `main.tsx`), de modo que el estado de autenticación está disponible
+ * para todas las rutas (Req 3.1).
+ *
+ * Rutas:
+ * - `/`            → Sitio_Publico con su layout de la Fase 1, envuelto en
+ *                    PaletteProvider + SiteDataProvider (Req 3.7).
+ * - `/admin/login` → LoginPage (Req 2, 3.5).
+ * - `/admin/*`     → ProtectedRoute que envuelve el Panel_Admin (Req 3.3, 3.4,
+ *                    3.6). El comodín `*` protege cualquier subruta del panel.
+ */
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
-  const [lightboxPhotos, setLightboxPhotos] = useState<Photo[]>([]);
-
-  const handlePhotoClick = useCallback((index: number, photos: Photo[]) => {
-    setLightboxPhotos(photos);
-    setCurrentPhotoIndex(index);
-    setIsOpen(true);
-  }, []);
-
-  const handleLightboxClose = useCallback(() => {
-    setIsOpen(false);
-  }, []);
-
-  const handleLightboxNavigate = useCallback((newIndex: number) => {
-    setCurrentPhotoIndex(newIndex);
-  }, []);
-
   return (
-    <PaletteProvider>
-      <Navbar />
-      <HeroSection />
-      <GallerySection onPhotoClick={handlePhotoClick} />
-      <BrandsSection />
-      <AboutSection />
-      <ContactSection />
-      <Lightbox
-        isOpen={isOpen}
-        photos={lightboxPhotos}
-        currentIndex={currentPhotoIndex}
-        onClose={handleLightboxClose}
-        onNavigate={handleLightboxNavigate}
+    <Routes>
+      <Route path="/" element={<PublicSite />} />
+      <Route path="/admin/login" element={<LoginPage />} />
+      <Route
+        path="/admin/*"
+        element={
+          <ProtectedRoute>
+            <SiteDataProvider>
+              <AdminPage />
+            </SiteDataProvider>
+          </ProtectedRoute>
+        }
       />
-      <PaletteSwitcher />
-    </PaletteProvider>
+    </Routes>
   );
 }

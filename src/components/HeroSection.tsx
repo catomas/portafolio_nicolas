@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { siteData } from '../data/siteData';
+import { useSiteData } from '../contexts/SiteDataContext';
 
 export default function HeroSection() {
   const [imageError, setImageError] = useState<boolean>(false);
-  const { name, subtitle, backgroundUrl } = siteData.hero;
+  const { hero } = useSiteData();
+  const { name, subtitle, backgroundUrl } = hero;
 
   return (
     <section

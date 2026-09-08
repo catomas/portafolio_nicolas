@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
-import { siteData } from '../data/siteData';
+import { useSiteData } from '../contexts/SiteDataContext';
 import type { Photo } from '../data/types';
+import { sortPhotosByOrder } from '../lib/photoOrder';
 import CategoryFilter from './CategoryFilter';
 import PhotoGrid from './PhotoGrid';
 
@@ -9,16 +10,22 @@ interface GallerySectionProps {
 }
 
 export default function GallerySection({ onPhotoClick }: GallerySectionProps) {
+  const { categories, photos } = useSiteData();
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
   const filteredPhotos = useMemo(() => {
+    // Sin filtro de categoría: ordenar todas las Fotos por `order` global (Req 15.11).
     if (activeCategory === 'all') {
-      return siteData.photos;
+      return sortPhotosByOrder(photos, 'global');
     }
-    return siteData.photos.filter(
+    // Con una categoría seleccionada: filtrar y ordenar por `categoryOrder` (Req 15.12).
+    // Las Fotos sin orden quedan al final de forma determinista (Req 15.13),
+    // gestionado por sortPhotosByOrder.
+    const inCategory = photos.filter(
       (photo) => photo.categoryId === activeCategory
     );
-  }, [activeCategory]);
+    return sortPhotosByOrder(inCategory, 'category');
+  }, [activeCategory, photos]);
 
   const handlePhotoClick = (index: number) => {
     onPhotoClick(index, filteredPhotos);
@@ -30,7 +37,7 @@ export default function GallerySection({ onPhotoClick }: GallerySectionProps) {
         Galería
       </h2>
       <CategoryFilter
-        categories={siteData.categories}
+        categories={categories}
         activeCategory={activeCategory}
         onCategoryChange={setActiveCategory}
       />

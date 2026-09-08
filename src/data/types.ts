@@ -4,12 +4,26 @@ export interface Category {
   name: string;
 }
 
+/** Tamaño de la foto en el grid tipo mosaico */
+export type PhotoSize =
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'wide'
+  | 'tall'
+  | 'extraWide'
+  | 'big'
+  | 'landscape';
+
 /** Fotografía individual */
 export interface Photo {
   id: string;
   url: string;
   title: string;
   categoryId: string; // Referencia a Category.id
+  size?: PhotoSize; // Tamaño en el grid (default: 'medium')
+  order?: number; // Posición en el orden global de fotos (0-based)
+  categoryOrder?: number; // Posición dentro de su categoría (0-based)
 }
 
 /** Datos del Hero */
@@ -47,12 +61,22 @@ export interface AboutData {
   socialLinks: SocialLink[];
 }
 
+/** Estilo de esquinas de las tarjetas de la galería */
+export type GalleryCorners = 'square' | 'rounded';
+
+/** Configuración de presentación de la galería */
+export interface GalleryStyle {
+  gap: number; // espaciado entre fotos en px, entero en [0, 64]
+  corners: GalleryCorners;
+}
+
 /** Estructura completa del archivo de datos */
 export interface SiteData {
   hero: HeroData;
   categories: Category[];
   photos: Photo[];
   about: AboutData;
-  brands?: Brand[];      // Marcas/clientes (opcional)
-  contact?: ContactData; // Datos de contacto (opcional)
+  brands?: Brand[];              // Marcas/clientes (opcional)
+  contact?: ContactData;         // Datos de contacto (opcional)
+  galleryStyle?: GalleryStyle;   // Estilo de la galería (opcional, nuevo)
 }

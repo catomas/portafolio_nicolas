@@ -1,10 +1,10 @@
-import { siteData } from '../data/siteData';
+import { useSiteData } from '../contexts/SiteDataContext';
 import BrandMarquee from './BrandMarquee';
 
 export default function BrandsSection() {
-  const brands = siteData.brands;
+  const { brands } = useSiteData();
 
-  if (!brands || brands.length === 0) return null;
+  if (brands.length === 0) return null;
 
   return (
     <section id="brands" className="px-6 py-16 max-w-6xl mx-auto">

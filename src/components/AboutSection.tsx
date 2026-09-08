@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { siteData } from '../data/siteData';
+import { useSiteData } from '../contexts/SiteDataContext';
 import SocialLinks from './SocialLinks';
 
 export default function AboutSection() {
-  const { bio, photographerPhotoUrl, socialLinks } = siteData.about;
+  const { about } = useSiteData();
+  const { bio, photographerPhotoUrl, socialLinks } = about;
   const hasBio = bio !== undefined && bio.length > 0;
   const displayBio = hasBio ? bio.slice(0, 500) : '';
 
@@ -16,7 +17,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="px-6 py-16 md:py-24 max-w-3xl mx-auto">
       <h2 className="font-display text-3xl md:text-4xl font-bold text-text-primary mb-8">
-        About
+        Sobre Mí
       </h2>
 
       <div className={showImage ? 'md:flex md:gap-8' : ''}>

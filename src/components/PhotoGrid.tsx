@@ -1,5 +1,7 @@
 import type { Photo } from '../data/types';
 import PhotoCard from './PhotoCard';
+import { useSiteData } from '../contexts/SiteDataContext';
+import { useSquareGrid } from '../hooks/useSquareGrid';
 
 interface PhotoGridProps {
   readonly photos: Photo[];
@@ -7,6 +9,9 @@ interface PhotoGridProps {
 }
 
 export default function PhotoGrid({ photos, onPhotoClick }: PhotoGridProps) {
+  const { galleryStyle } = useSiteData();
+  const { ref, gridStyle } = useSquareGrid(galleryStyle.gap);
+
   if (photos.length === 0) {
     return (
       <p className="text-center text-text-primary/70 font-body py-12">
@@ -16,7 +21,7 @@ export default function PhotoGrid({ photos, onPhotoClick }: PhotoGridProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div ref={ref} className="grid grid-flow-dense" style={gridStyle}>
       {photos.map((photo, index) => (
         <PhotoCard
           key={photo.id}
