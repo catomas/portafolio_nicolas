@@ -238,6 +238,7 @@ export const siteData: SiteData = {
     },
   ],
   about: {
+    title: 'Sobre Mí',
     bio: 'Fotógrafo colombiano apasionado por capturar la esencia de los lugares y las personas que los habitan. Viajo con mi cámara buscando historias visuales que conecten culturas y despierten curiosidad.',
     photographerPhotoUrl:
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600',
@@ -301,4 +302,5 @@ export const siteData: SiteData = {
     subtitle: '¿Tienes un proyecto en mente? Hablemos.',
   },
   galleryStyle: { gap: 16, corners: 'rounded' },
+  sections: { gallery: 'Galería', brands: 'Marcas' },
 };

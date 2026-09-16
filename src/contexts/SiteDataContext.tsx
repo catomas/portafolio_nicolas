@@ -36,6 +36,7 @@ import type {
   ContactData,
   Category,
   GalleryStyle,
+  SectionTitles,
   Photo,
   Brand,
 } from '../data/types';
@@ -49,6 +50,7 @@ export interface SiteDataContextValue {
   brands: Brand[];
   contact: ContactData;
   galleryStyle: GalleryStyle;
+  sections: SectionTitles;
 }
 
 const SiteDataContext = createContext<SiteDataContextValue | null>(null);
@@ -77,6 +79,8 @@ const FALLBACK_CONTACT: ContactData = siteData.contact ?? { title: 'Contacto' };
 const FALLBACK_CATEGORIES: Category[] = siteData.categories;
 const FALLBACK_GALLERY_STYLE: GalleryStyle =
   siteData.galleryStyle ?? { gap: 16, corners: 'rounded' };
+const FALLBACK_SECTIONS: SectionTitles =
+  siteData.sections ?? { gallery: 'Galería', brands: 'Marcas' };
 
 /** Forma del Documento_Singleton `site-config/categories`. */
 interface CategoriesDoc {
@@ -152,6 +156,21 @@ export function SiteDataProvider({ children }: SiteDataProviderProps) {
     },
   });
 
+  const sections = useFirestoreDoc<SectionTitles>({
+    path: 'site-content/sections',
+    getFallback: () => FALLBACK_SECTIONS,
+    // Vacío si falta el objeto o carecen tanto `gallery` como `brands`.
+    isEmpty: (data) => {
+      const d = data as Partial<SectionTitles> | null | undefined;
+      if (!d || typeof d !== 'object') return true;
+      const hasGallery =
+        typeof d.gallery === 'string' && d.gallery.trim() !== '';
+      const hasBrands =
+        typeof d.brands === 'string' && d.brands.trim() !== '';
+      return !hasGallery && !hasBrands;
+    },
+  });
+
   const { photos, loading: photosLoading } = usePhotos();
   const { brands, loading: brandsLoading } = useBrands();
 
@@ -162,6 +181,7 @@ export function SiteDataProvider({ children }: SiteDataProviderProps) {
     contact.loading ||
     categories.loading ||
     galleryStyle.loading ||
+    sections.loading ||
     photosLoading ||
     brandsLoading;
 
@@ -174,6 +194,7 @@ export function SiteDataProvider({ children }: SiteDataProviderProps) {
       brands,
       contact: contact.data,
       galleryStyle: galleryStyle.data,
+      sections: sections.data,
     }),
     [
       hero.data,
@@ -183,6 +204,7 @@ export function SiteDataProvider({ children }: SiteDataProviderProps) {
       brands,
       contact.data,
       galleryStyle.data,
+      sections.data,
     ],
   );
 

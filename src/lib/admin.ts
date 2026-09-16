@@ -69,6 +69,7 @@ import type {
   ContactData,
   Category,
   GalleryStyle,
+  SectionTitles,
 } from '../data/types';
 import { db } from './firebase';
 
@@ -360,6 +361,13 @@ export async function updateCategories(cats: Category[]): Promise<void> {
 /** Actualiza el estilo de la galería en `site-config/gallery-style` (Req 11.3). */
 export async function updateGalleryStyle(s: GalleryStyle): Promise<void> {
   await setDoc(doc(db, 'site-config', 'gallery-style'), stripUndefined(s), {
+    merge: true,
+  });
+}
+
+/** Actualiza los títulos de sección en `site-content/sections`. */
+export async function updateSectionTitles(data: SectionTitles): Promise<void> {
+  await setDoc(doc(db, 'site-content', 'sections'), stripUndefined(data), {
     merge: true,
   });
 }

@@ -10,7 +10,7 @@ interface GallerySectionProps {
 }
 
 export default function GallerySection({ onPhotoClick }: GallerySectionProps) {
-  const { categories, photos } = useSiteData();
+  const { categories, photos, sections } = useSiteData();
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
   const filteredPhotos = useMemo(() => {
@@ -34,7 +34,7 @@ export default function GallerySection({ onPhotoClick }: GallerySectionProps) {
   return (
     <section id="gallery" className="px-6 py-16 md:px-12 lg:px-20 bg-bg-primary">
       <h2 className="font-display text-3xl md:text-4xl font-bold text-text-primary text-center mb-10">
-        Galería
+        {sections.gallery || 'Galería'}
       </h2>
       <CategoryFilter
         categories={categories}

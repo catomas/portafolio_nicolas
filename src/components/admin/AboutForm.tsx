@@ -7,6 +7,8 @@ import type { AboutData, SocialLink } from '../../data/types';
 
 /** Límite de caracteres del campo `bio` (Req 8.2). */
 const BIO_MAX = 500;
+/** Límite de caracteres del título de la sección. */
+const TITLE_MAX = 60;
 
 /** Estado del guardado del formulario. */
 type Status = 'idle' | 'saving';
@@ -53,6 +55,7 @@ function isValidUrl(value: string): boolean {
 export default function AboutForm({ onFeedback }: AdminFormProps) {
   const { about } = useSiteData();
 
+  const [title, setTitle] = useState(about.title ?? 'Sobre Mí');
   const [bio, setBio] = useState(about.bio);
   // Foto del fotógrafo actual persistida (se conserva si no se sube una nueva).
   const [photographerPhotoUrl] = useState(about.photographerPhotoUrl ?? '');
@@ -173,6 +176,7 @@ export default function AboutForm({ onFeedback }: AdminFormProps) {
       }));
 
       const data: AboutData = {
+        title: title.trim() || 'Sobre Mí',
         bio: bio.trim(),
         socialLinks: normalizedLinks,
       };
@@ -200,6 +204,29 @@ export default function AboutForm({ onFeedback }: AdminFormProps) {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="max-w-xl space-y-6">
+      <div>
+        <label
+          htmlFor="about-title"
+          className="mb-1 block font-body text-sm text-text-primary/80"
+        >
+          Título de la sección
+        </label>
+        <input
+          id="about-title"
+          name="title"
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          maxLength={TITLE_MAX}
+          disabled={saving}
+          className="w-full rounded-md border border-accent/40 bg-bg-secondary px-4 py-2 font-body text-text-primary placeholder:text-text-primary/50 transition-colors focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-60"
+          placeholder="Sobre Mí"
+        />
+        <p className="mt-1 font-body text-xs text-text-primary/50">
+          {title.length}/{TITLE_MAX}
+        </p>
+      </div>
+
       <div>
         <label
           htmlFor="about-bio"

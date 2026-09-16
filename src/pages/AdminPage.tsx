@@ -8,6 +8,7 @@ import HeroForm from '../components/admin/HeroForm';
 import AboutForm from '../components/admin/AboutForm';
 import BrandForm from '../components/admin/BrandForm';
 import ContactForm from '../components/admin/ContactForm';
+import SectionTitlesForm from '../components/admin/SectionTitlesForm';
 
 /** Pestañas disponibles en el Panel_Admin (Req 5.1, 6.1, 7.1, 8.1, 9.1, 10.1, 11.1, 15.1). */
 type AdminTab =
@@ -16,7 +17,8 @@ type AdminTab =
   | 'hero'
   | 'about'
   | 'marcas'
-  | 'contacto';
+  | 'contacto'
+  | 'secciones';
 
 /** Definición de cada pestaña: id, etiqueta visible. */
 const TABS: ReadonlyArray<{ id: AdminTab; label: string }> = [
@@ -26,6 +28,7 @@ const TABS: ReadonlyArray<{ id: AdminTab; label: string }> = [
   { id: 'about', label: 'About' },
   { id: 'marcas', label: 'Marcas' },
   { id: 'contacto', label: 'Contacto' },
+  { id: 'secciones', label: 'Secciones' },
 ];
 
 /** Feedback a nivel de página con auto-dismiss (Req 5.8/5.9, 6.8/6.9, ...). */
@@ -109,6 +112,8 @@ export default function AdminPage() {
         return <BrandForm onFeedback={handleFeedback} />;
       case 'contacto':
         return <ContactForm onFeedback={handleFeedback} />;
+      case 'secciones':
+        return <SectionTitlesForm onFeedback={handleFeedback} />;
     }
   };
 

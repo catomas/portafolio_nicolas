@@ -56,9 +56,16 @@ export interface ContactData {
 
 /** Datos de la sección About */
 export interface AboutData {
+  title?: string; // Título de la sección (default en UI: 'Sobre Mí')
   bio: string;
   photographerPhotoUrl?: string; // Foto del fotógrafo
   socialLinks: SocialLink[];
+}
+
+/** Títulos editables de secciones sin documento propio (galería y marcas) */
+export interface SectionTitles {
+  gallery?: string; // Título de la galería (default en UI: 'Galería')
+  brands?: string; // Título de la sección de marcas (default en UI: 'Marcas')
 }
 
 /** Estilo de esquinas de las tarjetas de la galería */
@@ -79,4 +86,5 @@ export interface SiteData {
   brands?: Brand[];              // Marcas/clientes (opcional)
   contact?: ContactData;         // Datos de contacto (opcional)
   galleryStyle?: GalleryStyle;   // Estilo de la galería (opcional, nuevo)
+  sections?: SectionTitles;      // Títulos editables de galería/marcas (opcional)
 }

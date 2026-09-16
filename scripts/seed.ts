@@ -127,6 +127,11 @@ async function seed(): Promise<void> {
       ref: doc(db, 'site-config', 'gallery-style'),
       data: siteData.galleryStyle ?? { gap: 16, corners: 'rounded' },
     },
+    {
+      label: 'site-content/sections',
+      ref: doc(db, 'site-content', 'sections'),
+      data: siteData.sections ?? { gallery: 'Galería', brands: 'Marcas' },
+    },
   ];
 
   for (const { label, ref, data } of singletons) {
